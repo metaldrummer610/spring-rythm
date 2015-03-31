@@ -92,7 +92,7 @@ public class BinaryResult extends Result {
 
     public BinaryResult(InputStream is, String name, long length, String contentType, boolean inline) {
         super(HttpStatus.OK);
-        this.binary = SObject.of(name, is);
+        this.binary = SObject.valueOf(name, is);
         this.name = name;
         this.contentType = contentType;
         this.disposition = Disposition.of(inline);
@@ -115,7 +115,7 @@ public class BinaryResult extends Result {
      */
     public BinaryResult(File file, String name, boolean inline) {
         super(HttpStatus.OK);
-        this.binary = SObject.of(name, file);
+        this.binary = SObject.valueOf(name, file);
         this.name = name;
         this.disposition = Disposition.of(inline);
         if (file == null) {

@@ -335,6 +335,11 @@ public class RythmConfigurer extends RythmEngineFactory implements
     }
 
     @Override
+    public void extendMessageConverters(List<HttpMessageConverter<?>> converters) {
+
+    }
+
+    @Override
     public Validator getValidator() {
         return null;
     }
@@ -346,6 +351,11 @@ public class RythmConfigurer extends RythmEngineFactory implements
 
     @Override
     public void configureAsyncSupport(AsyncSupportConfigurer configurer) {
+
+    }
+
+    @Override
+    public void configurePathMatch(PathMatchConfigurer configurer) {
 
     }
 
@@ -399,6 +409,11 @@ public class RythmConfigurer extends RythmEngineFactory implements
 
     @Override
     public void addViewControllers(ViewControllerRegistry registry) {
+
+    }
+
+    @Override
+    public void configureViewResolvers(ViewResolverRegistry registry) {
 
     }
 
