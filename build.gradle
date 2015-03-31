@@ -35,14 +35,20 @@ dependencies {
     compile 'org.osgl:osgl-storage:0.2'
 }
 
-gitPublishConfig{
+gitPublishConfig {
     org = "metaldrummer610"
     repo = "spring-rythm"
 }
 
 publishing {
     publications {
-        //...s
+        maven(MavenPublication) {
+            groupId 'org.rythmengine'
+            artifactId 'spring-rythm'
+            version '1.2'
+
+            from components.java
+        }
     }
     repositories {
         maven {
